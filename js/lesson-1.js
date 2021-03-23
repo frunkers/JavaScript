@@ -1,16 +1,16 @@
 "use strict";
 
-// num_1
+// ===== num_1 =====
 let tc = prompt("Введите температуру в градусах по Цельсию");
 let tf = (9 / 5) * tc + 32;
 alert(`Температура в градусах по Фаренгейту: ${tf}`);
 
-// num_2
+// ===== num_2 =====
 let name = "Василий";
 let admin = name;
 console.log(admin);
 
-// num_3
+// ===== num_3 =====
 console.log(10 + 10 + "10");
 console.log(10 + "10" + 10);
 console.log(10 + 10 + +"10");
