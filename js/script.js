@@ -1,12 +1,20 @@
-// "use strict";
+// 'use strict';
+// let users = [{
+// 	surname: 'Dmitry',
+// 	gender: 'men'
+// }, {
+// 	surname: 'Anna',
+// 	gender: 'women'
+// }];
 
-// function sayHello() {
-// 	let name = prompt("Введите своё имя");
-// 	console.log(name);
-
-// 	if (name == false) {
-// 		alert("Введите имя!");
+// users.map(function (user) {
+// 	switch (user.gender) {
+// 		case 'men':
+// 			user.appeal = 'Mr';
+// 			break;
+// 		case 'women':
+// 			user.appeal = 'Mrs';
 // 	}
-// }
+// });
 
-// sayHello();
+// console.log(users);
