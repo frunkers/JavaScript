@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="products">
-        <div class="product">
-            <div class="imgWrap">
-                <img src="images/loading.gif" alt="">
-            </div>
-            <div>Товар 1</div>
-            <div>33.88 р.</div>
-        </div>
-        <div class="product">
-            <div class="imgWrap">
-                <img src="images/loading.gif" alt="">
-            </div>
-            <div>Товар 2</div>
-            <div>240.41 р.</div>
-        </div>
-        <div class="product">
-            <div class="imgWrap">
-                <img src="images/loading.gif" alt="">
-            </div>
-            <div>Товар 3</div>
-            <div>971.36 р.</div>
-        </div>
-    </div>
 
-    <!-- Задание. Нужно через 3 секунды заменить все картинки loading.gif на картинки
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="products">
+		<div class="product">
+			<div class="img-wrap">
+				<img src="images/loading.gif" alt="">
+			</div>
+
+			<div>Товар 1</div>
+			<div>33.88 р.</div>
+		</div>
+
+		<div class="product">
+			<div class="img-wrap">
+				<img src="images/loading.gif" alt="">
+			</div>
+
+			<div>Товар 2</div>
+			<div>240.41 р.</div>
+		</div>
+
+		<div class="product">
+			<div class="img-wrap">
+				<img src="images/loading.gif" alt="">
+			</div>
+
+			<div>Товар 3</div>
+			<div>971.36 р.</div>
+		</div>
+	</div>
+
+	<!-- Задание. Нужно через 3 секунды заменить все картинки loading.gif на картинки
     из папки images.
     1. Получите все картинки например с помощью querySelectorAll
     2. Переберите эту коллекцию с помощью цикла for, в цикле каждой картинке
@@ -40,8 +47,17 @@
     3. Наконец весь код оберните в setTimeout, и выставите задержку 3 сек.
     -->
 
-    <script>
-        
-    </script>
+	<script>
+		'use strict';
+
+		let images = document.querySelectorAll('img');
+
+		setTimeout(function () {
+			for (var i = 0; i < 3; i++) {
+				images[i].setAttribute('src', `images/${i}.jpg`);
+			}
+		}, 3000);
+	</script>
 </body>
+
 </html>
