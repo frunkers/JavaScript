@@ -1,8 +1,8 @@
 'use strict';
 const texts = {
-    text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    text2: 'Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.',
-    text3: 'Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил.'
+	text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+	text2: 'Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.',
+	text3: 'Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил.'
 };
 
 /* 
@@ -12,15 +12,22 @@ const texts = {
     обработчик клика функцию clickHandler.
 */
 
+let text = document.querySelector('.text');
+let links = document.querySelectorAll('.nav-link');
+
+links.forEach(link => {
+	link.addEventListener('click', clickHandler);
+});
 
 /**
  * Обработчик клика по .nav-link
  * @param {MouseEvent} event 
  */
 function clickHandler(event) {
-    // здесь вызывайте changeText и changeActiveClass, и передавайте
-    // им объект события.
-   
+	// здесь вызывайте changeText и changeActiveClass, и передавайте
+	// им объект события.
+	changeActiveClass(event);
+	changeText(event);
 }
 
 /**
@@ -29,7 +36,8 @@ function clickHandler(event) {
  * @param {MouseEvent} event 
  */
 function changeActiveClass(event) {
-    
+	document.querySelector('.active').classList.remove('active');
+	event.target.classList.add('active');
 }
 
 /**
@@ -39,5 +47,14 @@ function changeActiveClass(event) {
  * @param {MouseEvent} event 
  */
 function changeText(event) {
-    
+	switch (event.target.innerHTML) {
+		case 'Link 1':
+			text.innerHTML = texts.text1;
+			break;
+		case 'Link 2':
+			text.innerHTML = texts.text2;
+			break;
+		case 'Link 3':
+			text.innerHTML = texts.text3;
+	}
 }

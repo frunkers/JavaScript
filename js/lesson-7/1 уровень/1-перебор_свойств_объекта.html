@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
+
 <body>
-    <script>
-        const products = {
-            one: "один",
-            two: "два",
-            three: "три",
-        };
+	<script>
+		'use strict';
 
-        /* 
-        Задание.
-        Используя цикл for in переберите объект products, ведите в консоль
-        имя свойства, значение свойства.
-        */
+		const products = {
+			one: "один",
+			two: "два",
+			three: "три",
+		};
 
-    </script>
+		/* 
+		Задание.
+		Используя цикл for in переберите объект products, ведите в консоль
+		имя свойства, значение свойства.
+		*/
+
+		for (let prop in products) {
+			console.log(prop);
+			console.log(products[prop]);
+		}
+	</script>
 </body>
+
 </html>
