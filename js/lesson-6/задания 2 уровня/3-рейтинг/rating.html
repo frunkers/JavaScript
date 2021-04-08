@@ -54,7 +54,7 @@
 				// if (!star.classList.contains('goldenClass')) {
 				// 	star.classList.add(goldenClass);
 				// }
-				prevEl = star.previousElementSibling;
+				let prevEl = star.previousElementSibling;
 
 				while (prevEl != null) {
 					prevEl.classList.add(goldenClass);
@@ -65,7 +65,7 @@
 			star.addEventListener('mouseout', function () {
 				star.classList.remove(goldenClass);
 
-				prevEl = star.previousElementSibling;
+				let prevEl = star.previousElementSibling;
 
 				while (prevEl != null) {
 					prevEl.classList.remove(goldenClass);

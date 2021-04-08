@@ -53,7 +53,7 @@
 		let images = document.querySelectorAll('img');
 
 		setTimeout(function () {
-			for (var i = 0; i < 3; i++) {
+			for (let i = 0; i < 3; i++) {
 				images[i].setAttribute('src', `images/${i}.jpg`);
 			}
 		}, 3000);
